@@ -1,15 +1,15 @@
 // Importing 'dotenv' to store private info
-request("dotenv").config();
+require("dotenv").config();
 const mysql = require('mysql');
 const util = require('util');
 
 // creating credentials to connect the DB (MySQL)
 const connection = mysql.createConnection({
-    host: "localhost",
+    host: "127.0.0.1",
     user: "root", 
-    port: "8000",
-    password: process.env.DB_PASSWORD,
-    databasae: "employees_db"
+    port: "3306",
+    password: "root",
+    database: "employees_db"
 })
 
 // if credentials don't work this throws an error message
